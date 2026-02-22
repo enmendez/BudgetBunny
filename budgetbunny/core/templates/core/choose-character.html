@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Astro v5.13.2">
-    <link rel="stylesheet" href="{% static 'css/choose-character.css' %}">
+    <link rel="stylesheet" href="{% static 'core/css/choose-character.css' %}">
     <!-- Bootstrap CSS -->
     <link 
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" 
@@ -58,19 +58,23 @@
             <div id="selection-screen">
                 <h1>Choose your Budg<span style="color: black">EGG</span>ter</h1>
             </div>
+    
+            <div class="content">
+                <div class="box">
+                    <img src="{% static 'core/img/rainbowegg.png' %}" alt="Rainbow egg">
+                </div>
+                <div class="box">
+                    <img src="{% static 'core/img/galaxyegg.png' %}" alt="Galaxy egg">
+                </div>
+                <div class="box">
+                    <a href="{% url 'show_cscreen' %}">
+                    <img src="{% static 'core/img/pearlegg.png' %}" alt="Regular egg">
+                </a>
+                </div>
+                
+            </div>
 
-<div class="content">
-    <div class="box" onclick="alert('Rainbow egg clicked!')">
-        <img src="{% static 'core/img/rainbowegg.png' %}" alt="Rainbow egg">
-    </div>
-    <div class="box" onclick="alert('Galaxy egg clicked!')">
-        <img src="{% static 'core/img/galaxyegg.png' %}" alt="Galaxy egg">
-    </div>
-    <div class="box" onclick="alert('Regular egg clicked!')">
-        <img src="{% static 'core/img/pearlegg.png' %}" alt="Regular egg">
-    </div>
-</div>
-          
+
         </main>
 
         <footer class="mt-auto text-white-50">
