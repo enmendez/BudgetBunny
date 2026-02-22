@@ -10,7 +10,8 @@ We created BudgetBunny--an interactive, budget-tracking and saving app. Users ar
 to level-up their cute bunny avatar. 
 
 ## How We Build It
-- Backend: Django (add more here)
+- Backend: Django, Python
+-  - We used Django to process user requests and interact with a Neon Tech database.
 - Frontend: HTML, CSS, Javascript
 
 ## What's Next?
