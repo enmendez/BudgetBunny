@@ -26,8 +26,38 @@ body{
     gap:20px;
     margin-bottom: 40px;
 }
+<<<<<<< HEAD:budgetbunny/core/static/css/choose-character.css
 h1 {
   font-size: 55px!important;
+=======
+
+.content{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; 
+    gap: 5px;
+    padding: 1rem;
+    cursor: pointer; 
+    position: relative; 
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.content img {
+    width: auto;
+    height: 300px;
+    width: auto;
+    gap: 1rem;
+    padding: .2rem;
+    z-index:999; 
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.content img:hover, .content img:focus{
+    transform: scale(1.15);
+
+>>>>>>> 3da802696655765b72a957ec98808da8dea0de69:budgetbunny/core/static/core/css/choose-character.css
 }
 
 p {
