@@ -1,6 +1,7 @@
+from django.forms import formset_factory
 from django.http import HttpResponse
 from django.shortcuts import redirect, render
-from .forms import CardInfo
+from .forms import CardInfo, CardInfoForm
 
 # Create your views here.
 
@@ -21,25 +22,22 @@ def choose_character(request):
     
     return render(request, "core/choose-character.html")
 
-# Show the card form with the chosen egg
-def show_card_form(request):
+def card_form(request):
     egg = request.session.get("egg_choice")
-    return render(request, "core/card_form.html", {"egg": egg})
 
-# Still working on this
-# # Receive user input
-def card_input(request):
+    CardInfoFormSet = formset_factory(CardInfoForm, extra=1)
+
     if request.method == "POST":
-        formset = CardInfo(request.POST)
-        if formset.is_valid():
-            for form in formset:
-                if form.cleaned_data:
-                    form.save() # save each card to Neon database
-            return render(request, "success.html")
-    else:
-        formset = CardInfo()
-    return render(request, "card_form.html", {"formset": formset})
-    return render(request, "core/choose-character.html")
+        formset = CardInfoFormSet(request.POST)
+        if formset.is_Valid():
+            request.session["cards"] = formset.cleaned_Data
+            return redirect("summary")
+    else: formset = CardInfoFormSet
+
+    return render(request, "core/card_form.html", {
+        "formset": formset,
+        "egg": egg
+    })
 
 # Show main
 def show_main(request):
