@@ -17,9 +17,14 @@ def choose_character(request):
     if request.method == "POST":
         egg = request.POST.get("egg")
         request.session["egg_choice"] = egg
-        return redirect("card_input")
+        return redirect("card_form")
     
     return render(request, "core/choose-character.html")
+
+# Show the card form with the chosen egg
+def show_card_form(request):
+    egg = request.session.get("egg_choice")
+    return render(request, "core/card_form.html", {"egg": egg})
 
 # Still working on this
 # # Receive user input
