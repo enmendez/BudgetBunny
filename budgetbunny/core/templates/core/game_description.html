@@ -1,43 +1,13 @@
-{% load static %}
 <!DOCTYPE html>
-<html lang="en" class="h-100" data-bs-theme="auto">
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Astro v5.13.2">
-    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Bunny</title>
+    
+    <!--Boostrap CSS-->
+    <link rel="stylesheet" href="{% static 'css/game_description.css' %}">
 
-    <!-- Bootstrap CSS -->
-    <link 
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" 
-        rel="stylesheet" 
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" 
-        crossorigin="anonymous"
-    >
-
-    <title>Cover Template · Bootstrap v5.3</title>
-
-    <!-- Bootstrap Docs Assets (these won't work unless you host them locally) -->
-    <script src="/docs/5.3/assets/js/color-modes.js"></script>
-    <link href="/docs/5.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="apple-touch-icon" href="/docs/5.3/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
-    <link rel="icon" href="/docs/5.3/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
-    <link rel="icon" href="/docs/5.3/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
-    <link rel="manifest" href="/docs/5.3/assets/img/favicons/manifest.json">
-    <link rel="mask-icon" href="/docs/5.3/assets/img/favicons/safari-pinned-tab.svg" color="#712cf9">
-    <link rel="icon" href="/docs/5.3/assets/img/favicons/favicon.ico">
-    <meta name="theme-color" content="#712cf9">
-
-    <!-- Custom CSS -->
-    <link href="cover.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Chewy&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
-
-
-</head>
 
 <body class="d-flex h-100 text-center text-bg-dark">
 
@@ -95,11 +65,16 @@
 
         <main class="px-3">
             <h1 class="title">Budget Bunny</h1>
-            <p class="lead">
-                Hopping toward a better future!
+            <p class="lead" id="statistic">
+                54% of U.S. adults say they know at least a fair amount about personal finances
             </p>
+
+            <p class="lead" id="substitle">
+                Test your financial literacy as you grown a bunny!
+            </p>
+
             <p class="lead">
-                <a href="#" class="btn btn-lg btn-light fw-bold border-white bg-white">Play</a>
+                <a href="#" class="btn btn-lg btn-light fw-bold border-white bg-white">Continue</a>
             </p>
         </main>
 
