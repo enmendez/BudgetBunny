@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles2.css">
+    <link rel="stylesheet" href="styles3.css">
     <title>Character screen page</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,22 +26,33 @@
     </div>
 </div> 
 
+<div class="right-panel">
+<div class="currency-header">
+    <button class="shop-btn" onclick="openShop()">🛒 Shop</button>
+    <button class="carrot-count">🥕 0</button>
+</div>
 
-<div class="stats-section">
-    <div class="currency-header">
-        <button class="shop-btn" onclick="openShop()">🛒 Shop</button>
-        <button class="carrot-count">🥕 0</button>
+<div class="shop-section">
+    <div class="shop-grid">
+        <button class="shop-slot" type="button" onclick="buyItem('hat', 50)" aria-label="Buy Hat">
+            <img src="images/hat.jpg" alt="Hat" class="slot-img">
+        </button>
+        <button class="shop-slot" type="button" aria-label="Shop item 2"></button>
+        <button class="shop-slot" type="button" aria-label="Shop item 3"></button>
+        <button class="shop-slot" type="button" aria-label="Shop item 4"></button>
+        <button class="shop-slot" type="button" aria-label="Shop item 5"></button>
+        <button class="shop-slot" type="button" aria-label="Shop item 6"></button>
+        <button class="shop-slot" type="button" aria-label="Shop item 7"></button>
+        <button class="shop-slot" type="button" aria-label="Shop item 8"></button>
+        <button class="shop-slot" type="button" aria-label="Shop item 9"></button>
+        <button class="shop-slot" type="button" aria-label="Shop item 10"></button>
+        <button class="shop-slot" type="button" aria-label="Shop item 11"></button>
+        <button class="shop-slot" type="button" aria-label="Shop item 12"></button>
     </div>
-    <div class="stat-container">
-        <div class="stat-box">
-            <h3>Savings</h3>
-            <div class="stat-value-display"></div>
-        </div>
-        <div class="stat-box">
-            <h3>Investments</h3>
-            <div class="stat-value-display"></div>
-        </div>
+    
     </div>
+    
+    
     
 
 </div>
@@ -62,3 +73,18 @@
 </footer>
 </body>
 </html>
+
+
+<script>
+    let carrots = 500; 
+    
+    function buyItem(id, price){
+      if(carrots >= price){
+        carrots -= price;
+        alert("You bought: " + id);
+        document.querySelector(".carrot-count").textContent = "🥕 " + carrots;
+      } else {
+        alert("Not enough carrots!");
+      }
+    }
+    </script>

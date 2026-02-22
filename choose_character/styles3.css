@@ -1,0 +1,203 @@
+html,body{
+    height:100%;
+    margin: 0; 
+}
+
+ body { 
+    margin: 0; 
+    padding: 0; 
+} 
+ *, *::before, *::after {
+     box-sizing: border-box; 
+    }
+ 
+
+ .page{ 
+    height: 100vh;
+    width: 100%;
+    display:grid; 
+    grid-template-rows: 1fr auto;
+    } 
+ 
+ 
+ .main-layout-split{ 
+    display:grid;
+    grid-column: 1/-1;
+    grid-template-columns: 1fr 1fr;
+    height: 100%; 
+    width: 100%;
+    gap:20px;
+    padding: 20px; 
+    overflow: hidden; 
+    min-height: 0; 
+    align-items: stretch; }
+ 
+
+ 
+  .content-area{  
+    grid-column: 1/-1;
+    display:flex;
+    flex-direction:row;
+    width: 100%;
+    gap: 20px;
+    overflow: auto;
+    
+  
+ } 
+ 
+ /* places shop and carrot count next to each other */
+  .currency-header{
+    display:flex;
+    justify-content: center; 
+    gap: 1rem; 
+    margin-bottom: 1rem; 
+} 
+  
+  .shop-btn, .carrot-count{
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    background: white; 
+    width: 100px; 
+    cursor:pointer; 
+} 
+
+.shop-btn:hover, .carrot-count:hover{
+   background-color: rgb(184, 184, 184);
+   cursor:pointer;
+} 
+
+
+  
+  .character-section{
+    min-height: 550px;
+    flex:1;
+    width: 100%;
+
+    display:flex;
+    flex-direction:column;
+    gap:15px; 
+    padding: 30px; }
+  
+ .exp-row{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    width:100%;
+ }
+  .exp-label{
+    font-weight: bold; 
+    letter-spacing: 0.5px;
+ }
+
+   .exp-container{
+    flex:1;
+    height: 20px;
+    background-color:#e0e0e0;
+    border-radius: 10px;
+    overflow:hidden;
+   }
+
+   .exp-fill{
+    height: 100%;
+    width: 50%;
+    background-color: lightgreen;
+    border-radius: 10px;
+    transition: width 0.3 ease;
+   }
+
+
+   .right-panel{
+    flex: 1;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    height: 100%;
+    min-width: 0;
+    min-height: 0;
+   }
+
+  .shop-section{
+    background-color: rgb(241, 238, 238);
+    border:1px solid rgba(0,0,0,0.2);
+    display:flex;
+    flex-direction: column;
+    flex: 1;
+    width: 100%; 
+    gap: 10px;
+    padding: 2rem; 
+}
+   
+
+.shop-slot{
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    border: 1px solid rgba(0,0,0,0.15);
+    background: white;
+    cursor: pointer;
+    padding: 0;
+    display:grid;
+    place-items:center;
+    overflow: hidden;
+}
+
+.slot-img{
+    width: 70%;
+    height: 70%;
+    object-fit: contain;
+    pointer-events: none; 
+  }
+
+  .shop-grid{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    justify-items: center;
+  }
+
+
+   .chat-container{ 
+    display:flex; text-align:center;
+    align-items:center;
+    font-family: "Chewy", system-ui;
+    font-size: 1.5rem;
+    justify-content: space-between;
+    padding: 1rem;
+    gap: 5px;
+    padding: 0 1rem; }
+   
+   .text-box{ background-color: white;
+    padding: 1rem; width: 80%;
+    margin: 0 auto;
+    border-radius: 2rem;
+    overflow:hidden; 
+    } 
+   
+   
+   #fairy{ border-radius: 50%;
+    width: 8rem;
+    height: 8rem;
+    object-fit:cover;
+    } 
+
+#bunny-character{
+    max-width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: contain;
+
+    }
+
+
+
+
+footer{
+    background-color: #E6A055; 
+    margin-top:auto; 
+    width: 100%; 
+    padding: 1.5rem 0; 
+}
+
+
