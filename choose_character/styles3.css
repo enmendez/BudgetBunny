@@ -176,11 +176,13 @@ html,body{
     } 
    
    
-   #fairy{ border-radius: 50%;
-    width: 8rem;
-    height: 8rem;
-    object-fit:cover;
-    } 
+   
+    #gemini{
+        border-radius: 50%;
+        width: 200px;
+        height: 200px;
+        object-fit:cover;
+        } 
 
 #bunny-character{
     max-width: 100%;
