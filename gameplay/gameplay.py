@@ -37,8 +37,7 @@ def main_menu():
     while True:
         print("\n====== Main Menu ======")
         print("1. Add Money")
-        print("2. Show Status")
-        print("3. Exit")
+        print("2. Exit")
         choice = input("Enter your choice: ")
 
         if choice == "1":
@@ -48,8 +47,6 @@ def main_menu():
             except ValueError:
                 print("Please enter a valid number.")
         elif choice == "2":
-            game.show_status()
-        elif choice == "3":
             break
         else:
             print("Invalid choice.")
