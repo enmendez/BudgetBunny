@@ -2,17 +2,16 @@
 *Hopping towards a brighter future!*
 
 ## Motivation
-Budgeting can oftentimes be a daunting task. According to Debts.org in 2025, 90% of Americans have some form of debt.
-Therefore raising awareness about financial literacy and responsible financial decisions is imperative.
+Budgeting can be daunting. According to [Debt.org](https://www.debt.org/faqs/americans-in-debt/demographics/), 90% of Americans have some form of debt. Despite the impact income has on livelihood and mental well-being, many people struggle to manage their finances well. Therefore raising awareness about financial literacy and responsible financial decisions is imperative.
 
 
-## Introducing BudgetBunny
-To minimize this and to encourage people to create healthy financial habits, we created BudgetBunny--an interactive,
-budget-tracking and saving app. Users are incentivied to maintain saving portions of their income as they gain experience
-to level-up their bunny.
+## Introducing BudgetBunny 
+We created BudgetBunny--an interactive, budget-tracking and saving app. Users are incentivied to save portions of their income as they gain experience points
+to level-up their cute bunny avatar. 
 
 ## How We Build It
-- Backend: Django (add more here)
+- Backend: Django, Python
+-  - We used Django to process user requests and interact with a Neon Tech database.
 - Frontend: HTML, CSS, Javascript
 
 ## What's Next?

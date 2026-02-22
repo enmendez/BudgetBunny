@@ -1,0 +1,50 @@
+{% load form_extras %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/card_form.cc' %}">
+    <title>Budget Bunny</title>
+
+    <!--Boostrap CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+</head>
+<body>
+
+    <!-- Author: FormBold Team -->
+    <!-- Learn More: https://formbold.com -->
+    <form action="https://formbold.com/s/FORM_ID" method="POST">
+        {% csrf_token %}
+        {{ formset.management_form }}
+
+        <div class="formbold-form-wrapper" id="form-container">
+            {% for form in formset %}
+
+            <div class="formbold-mb5 formbold-card">
+                <label lass="formbold-form-label">Card Name</label>
+                {{ form.card_name | add_class: "formbold-form-input"}}
+
+                <label class="formbold-form-label">Amount in Savings</label>
+                {{ form.savings_amount|add_class: "formbold-form-input"}}
+
+                <label class="formbold-form-label">Amount in Checkings</label>
+                {{ form.checking_amount|add_class: "Formbold-form-input"}}
+                
+            </div>
+            {% endfor %}
+
+        </div>
+
+        <button type="button" id="add-form" class="formbold-btn-secondary">
+            + Add Card
+        </button>
+
+        <button type="submit" class="formbold-btn">
+            Submit
+        </button>
+    </form>
+
+</body>
+</html>
