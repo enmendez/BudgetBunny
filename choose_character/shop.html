@@ -26,13 +26,12 @@
     </div>
 </div> 
 
-<div class="right-panel">
-<div class="currency-header">
-    <button class="shop-btn" onclick="openShop()">🛒 Shop</button>
-    <button class="carrot-count">🥕 0</button>
-</div>
 
 <div class="stats-section">
+    <div class="currency-header">
+        <button class="shop-btn" onclick="openShop()">🛒 Shop</button>
+        <button class="carrot-count">🥕 0</button>
+    </div>
     <div class="stat-container">
         <div class="stat-box">
             <h3>Savings</h3>
@@ -43,8 +42,6 @@
             <div class="stat-value-display"></div>
         </div>
     </div>
-    <div id="fade-overlay"></div>
-    
     
 
 </div>
@@ -63,21 +60,5 @@
     <img src="images/fairy.jpg" alt="fairy-bunny" id="fairy">
 </div>
 </footer>
-
-
-
-<script>
-    function openShop(){
-        const overlay = document.getElementById("fade-overlay");
-
-        overlay.classList.add("is-active");
-
-        overlay.addEventListener("transitionend", () => {
-            window.location.href = "shop.html";
-        }, {once: true});
-        
-    }
-        
-</script>
 </body>
 </html>
