@@ -88,13 +88,32 @@ html,body{
     gap:15px; 
     padding: 30px; }
   
- 
+ .exp-row{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    width:100%;
+ }
   .exp-label{
-    font-weight: 800; 
+    font-weight: bold; 
     letter-spacing: 0.5px;
  }
 
-   /* .exp-container{ flex: 1; height: 20px; border-radius: 999px; overflow: hidden; } */ /* .exp-fill{ height: 100; width: 60%; background:lightgreen; border-radius: 999px; } */
+   .exp-container{
+    flex:1;
+    height: 20px;
+    background-color:#e0e0e0;
+    border-radius: 10px;
+    overflow:hidden;
+   }
+
+   .exp-fill{
+    height: 100%;
+    width: 50%;
+    background-color: lightgreen;
+    border-radius: 10px;
+    transition: width 0.3 ease;
+   }
    
    .stats-container{ 
     display:grid;
