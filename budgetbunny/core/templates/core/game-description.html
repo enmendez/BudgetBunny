@@ -126,42 +126,6 @@
         <!-- icons omitted for brevity -->
     </svg>
 
-    <!-- Theme Toggle -->
-    <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
-        <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
-                id="bd-theme" type="button" data-bs-toggle="dropdown" aria-expanded="false"
-                aria-label="Toggle theme (auto)">
-            <svg class="bi my-1 theme-icon-active" aria-hidden="true">
-                <use href="#circle-half"></use>
-            </svg>
-            <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
-        </button>
-
-        <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
-            <li>
-                <button type="button" class="dropdown-item d-flex align-items-center"
-                        data-bs-theme-value="light">
-                    <svg class="bi me-2 opacity-50"><use href="#sun-fill"></use></svg>
-                    Light
-                </button>
-            </li>
-            <li>
-                <button type="button" class="dropdown-item d-flex align-items-center"
-                        data-bs-theme-value="dark">
-                    <svg class="bi me-2 opacity-50"><use href="#moon-stars-fill"></use></svg>
-                    Dark
-                </button>
-            </li>
-            <li>
-                <button type="button" class="dropdown-item d-flex align-items-center active"
-                        data-bs-theme-value="auto">
-                    <svg class="bi me-2 opacity-50"><use href="#circle-half"></use></svg>
-                    Auto
-                </button>
-            </li>
-        </ul>
-    </div>
-
     <!-- Main Cover Container -->
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
 
@@ -178,10 +142,10 @@
                 54% of U.S. adults say they know at least a fair amount about personal finances
             </p>
             <P clas="subtitle">
-                Test your financial literacy as you raise a bunny
+                Test your financial literacy as you raise your very own bunny
             </P>
             <p class="lead">
-                <a href="#" class="btn btn-lg btn-light fw-bold border-white bg-white">Continue</a>
+                <a href="{% url 'choose_character' %}" class="btn btn-lg btn-light fw-bold border-white bg-white">Continue</a>
             </p>
         </main>
 
