@@ -5,59 +5,110 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles2.css">
     <title>Character screen page</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Allerta&family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&family=Archivo+Black&family=Cal+Sans&family=Changa+One:ital@0;1&family=Chewy&family=Fjalla+One&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lexend:wght@100..900&family=Pixelify+Sans:wght@400..700&family=Zalando+Sans:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-    <div class="page">
+<div class="page">
+
 <main class="main-layout-split">
-<div class="content-area">
+
+    <!-- LEFT COLUMN -->
     <div class="character-section">
-        <img src="images/bunny.png" alt="bunny character" id="bunny-character">    
-        
-    <div class="exp-row">
-        <span class="exp-label">EXP</span>
-    
-    <div class="exp-container">
-        <div class="exp-fill"></div>
-    </div>
-    </div>
-</div> 
+        <img src="images/bunny.png" alt="bunny character" id="bunny-character">
 
-
-<div class="stats-section">
-    <div class="currency-header">
-        <button class="shop-btn">🛒 Shop</button>
-        <button class="carrot-count">🥕 0</button>
-    </div>
-    <div class="stat-container">
-        <div class="stat-box">
-            <h3>Savings</h3>
-            <div class="stat-value-display"></div>
+        <div class="exp-row">
+            <span class="exp-label">EXP</span>
+            <div class="exp-container">
+                <div class="exp-fill"></div>
+            </div>
         </div>
-        <div class="stat-box">
-            <h3>Investments</h3>
-            <div class="stat-value-display"></div>
-        </div>
-    
     </div>
 
-</div>
+    <!-- RIGHT COLUMN -->
+    <div class="right-column">
 
-</div>
+        <div class="stats-section">
+            <div class="currency-header">
+                <button class="shop-btn">🛒 Shop</button>
+                <button class="carrot-count">🥕 0</button>
+            </div>
+
+            <div class="stat-container">
+                <div class="stat-box">
+                    <h3>Savings</h3>
+                    <div class="stat-value-display"></div>
+                </div>
+        </div>
+
+        <!-- CHAT WINDOW -->
+        <div class="chat-window" id="chatWindow"></div>
+
+        <!-- CHAT INPUT -->
+        <div class="chat-container">
+            <textarea class="chat-textarea" id="chatInput" placeholder="Ask a budgeting question..."></textarea>
+            <img src="images/gemini_bunny.png" alt="fairy-bunny" id="fairy">
+        </div>
+
+    </div>
+
 </main>
 
-
-
-<footer>
-<div class="chat-container">
-    <div class="text-box">
-    <h1>Good morning!</h1>
-    </div>
-    <img src="images/fairy.jpg" alt="fairy-bunny" id="fairy">
 </div>
-</footer>
+
+<script>
+const chatWindow = document.getElementById("chatWindow");
+const chatInput = document.getElementById("chatInput");
+
+function addMessage(text, sender) {
+    const msg = document.createElement("div");
+    msg.classList.add("chat-bubble", sender);
+    msg.textContent = text;
+    chatWindow.appendChild(msg);
+    chatWindow.scrollTop = chatWindow.scrollHeight;
+}
+
+chatInput.addEventListener("keydown", async function (e) {
+    if (e.key === "Enter") {
+        e.preventDefault();
+
+        const question = chatInput.value.trim();
+        if (!question) return;
+
+        addMessage(question, "user");
+        chatInput.value = "";
+
+        // Create placeholder bubble
+        const thinkingBubble = addMessage("Thinking...", "ai");
+
+        // Fast request with timeout
+        const controller = new AbortController();
+        const timeout = setTimeout(() => controller.abort(), 5000); // 5 sec timeout
+
+        try {
+            const res = await fetch("/ask", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ question }),
+                signal: controller.signal
+            });
+
+            clearTimeout(timeout);
+
+            const data = await res.json();
+            thinkingBubble.textContent = data.answer;
+
+        } catch (err) {
+            thinkingBubble.textContent = "Sorry, I'm having trouble responding right now.";
+        }
+    }
+});
+
+</script>
+
 </body>
 </html>

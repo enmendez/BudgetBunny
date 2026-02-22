@@ -59,23 +59,18 @@
                 <h1>Choose your Budg<span style="color: black">EGG</span>ter</h1>
             </div>
 
-            <form method="POST" action="{% url 'choose_character' %}">
-                {% csrf_token %}
-
-                <div class="eggs">
-                    <button type="submit" name="egg" value="rainbowegg" class="egg-btn">
-                        <img src="{% static 'img/rainbowegg.png' %}" alt="Rainbow egg">
-                    </button>
-
-                    <button type="submit" name="egg" value="galaxyegg" class="egg-btn" style="width:50px; height: 50px;">
-                        <img src="{% static 'img/galaxyegg.png' %}" alt="galaxy egg">
-                    </button>
-
-                    <button type="submit" name="egg" value="regularegg" class="egg-btn" style="width:50px; height: 50px;">
-                        <img src="{% static 'img/pearlegg.png' %}" alt="Regular egg">
-                    </button>
-                </div>
-            </form>
+<div class="content">
+    <div class="box" onclick="alert('Rainbow egg clicked!')">
+        <img src="{% static 'core/img/rainbowegg.png' %}" alt="Rainbow egg">
+    </div>
+    <div class="box" onclick="alert('Galaxy egg clicked!')">
+        <img src="{% static 'core/img/galaxyegg.png' %}" alt="Galaxy egg">
+    </div>
+    <div class="box" onclick="alert('Regular egg clicked!')">
+        <img src="{% static 'core/img/pearlegg.png' %}" alt="Regular egg">
+    </div>
+</div>
+          
         </main>
 
         <footer class="mt-auto text-white-50">
