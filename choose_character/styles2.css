@@ -1,159 +1,154 @@
 html,body{
     height:100%;
+    margin: 0; 
 }
 
-body {
-    margin: 0;
-    padding: 0;
-    /* width: 100%;
-    height: 100%; */
-}
+ body { 
+    margin: 0; 
+    padding: 0; 
+    /* width: 100%; height: 100%; */ 
+} 
+ *, *::before, *::after {
+     box-sizing: border-box; 
+    }
+ 
 
-*, *::before, *::after {
-    box-sizing: border-box;
-  }
-
-.page{
-    min-height: 100vh;
-    display:flex;
-    flex-direction: column;
-}
-
-.main-layout-split{
-    flex:1;
-    display:flex;
+ .page{ height: 100vh;
+    width: 100%;
+    display:grid; 
+    grid-template-rows: 1fr auto;
+     /* display:flex; flex-direction: column; */ 
+    } 
+ 
+ 
+ .main-layout-split{ /* flex:1; */ 
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+     /* height: 100%; */ 
+    width: 100%; 
     gap:20px;
-    width:100%;
-    padding: 20px;
-    overflow: auto;
-    min-height: 0;
-    align-items: stretch;
-
-}  
-
-
-.content-area{
-    border: red solid 1px;
-    flex: 0 0 400px;
+     /* width:100%; */
+    padding: 20px; 
+    overflow: hidden; 
+    min-height: 0; 
+    align-items: stretch; }
+ 
+ .content-area, .stats-section{
+    overflow: auto; 
+    height: 100%;
+ }
+ 
+ .content-area{ /* border: red solid 1px; */ 
+    flex: 0 0 400px; 
     display:flex;
-    
-
-}
-
-/* places shop and carrot count next to each other */
-.currency-header{
+ } 
+ 
+ /* places shop and carrot count next to each other */
+  .currency-header{
     display:flex;
-    justify-content: center;
-    gap: 3rem;
-    margin-bottom: 3rem;
-}
-
-.shop-btn, .carrot-count{
+    justify-content: center; 
+    gap: 1rem; 
+    margin-bottom: 3rem; 
+} 
+  
+  .shop-btn, .carrot-count{
     padding: 0.5rem 1rem;
     border-radius: 1rem;
-    background: white;
-    width: 100px;
-    cursor:pointer;
-}
-
-
-
-
-.stat-box{
+    background: white; 
+    width: 100px; 
+    cursor:pointer; 
+} 
+  
+  .stat-box{
     border: red solid 1px;
     padding: 10px;
     gap: 2rem;
     height: 200px;
     border-radius: 2rem;
-    margin-bottom: 1rem;
-
-}
-
-.character-section{
+    margin-bottom: 1rem; }
+  
+  .character-section{
     min-height: 550px;
+    flex:1;
     width: 400px;
     border: red solid 1px;
     display:flex;
     flex-direction:column;
-    gap:15px;
-    padding: 30px;
+    gap:15px; 
+    padding: 30px; }
+  
+ 
+  .exp-label{
+    font-weight: 800; 
+    letter-spacing: 0.5px;
+ }
 
-
-
-}
-
-.exp-container{
-    border: red solid 1px;
-    background-color:lightgreen;
-
-}
-
-.stats-container{
+   /* .exp-container{ flex: 1; height: 20px; border-radius: 999px; overflow: hidden; } */ /* .exp-fill{ height: 100; width: 60%; background:lightgreen; border-radius: 999px; } */
+   
+   .stats-container{ 
     display:grid;
     gap: 1rem;
     padding: 1rem;
-    
-    
-}
+   }
 
-.stats-section{
+  .stats-section{
     border: red solid 1px;
     background-color: rgb(241, 238, 238);
-    /* display: grid;
-    grid-template-rows: */
     display:flex;
     flex-direction: column;
     flex: 1;
+    width: auto; 
     gap: 10px;
-    padding: 1rem;
-    /* height: 100%; */
-
-}
-
-
-
-.chat-container{
+    padding: 1rem; }
+   
+   
+   .chat-container{ 
     border: red solid 1px;
-    display:flex;
-    text-align:center;
+    display:flex; text-align:center;
     align-items:center;
     font-family: "Chewy", system-ui;
     font-size: 1.5rem;
     justify-content: space-between;
     padding: 1rem;
     gap: 5px;
-    padding: 0 1rem;
-    
-
-}
-
-
-.text-box{
-    background-color: white;
-    padding: 1rem;
-    width: 80%;
+    padding: 0 1rem; }
+   
+   .text-box{ background-color: white;
+    padding: 1rem; width: 80%;
     margin: 0 auto;
     border-radius: 2rem;
     border: red solid 1px;
-    overflow:hidden;
-}
-
-#fairy{
-    border-radius: 50%;
+    overflow:hidden; 
+    } 
+   
+   
+   #fairy{ border-radius: 50%;
     width: 8rem;
     height: 8rem;
     object-fit:cover;
-}
+    } 
 
 
 
 
 
-footer{
-    background-color: #E6A055;
-    margin-top:auto;
-    width: 100%;
-    /* position:absolute;
-    bottom: 0; */
-    padding: 1.5rem 0;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer{ background-color: #E6A055; margin-top:auto; width: 100%; /* position:absolute; bottom: 0; */ padding: 1.5rem 0; }
