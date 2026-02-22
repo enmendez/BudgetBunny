@@ -26,3 +26,6 @@ def choose_character(request):
 # Show main
 def show_main(request):
     return render(request, 'core/main.html')
+
+def show_cscreen(request):
+    return render(request, "core/cscreen.html")
