@@ -6,13 +6,11 @@ Budgeting can be daunting. According to [Debt.org](https://www.debt.org/faqs/ame
 
 
 ## What It Does
-We created BudgetBunny--an interactive, budget-tracking and saving app. Users are incentivied to save portions of their income as, in exchange, they gain experience points
+We created BudgetBunny--an interactive, budget-tracking and saving app. Users are incentivized to save portions of their income as, in exchange, they gain experience points
 to level-up their cute bunny avatar. 
 
 ## How We Built It
-For the btackend, we used Django and Python. We used Django to process user requests and interact with a Neon Tech database.
-Python was used to code the main menu option and receiving user input. HTML, CSS, and Javascript was used for the frontend. Additionally, FireAlpaca
-was used to create the images and gifs for the budget buddys.
+For the btackend, we used Django and Python. We used Django to process user requests and interact with a Neon Tech database. Python was used to code the main menu option and receiving user input. HTML, CSS, and Javascript was used for the frontend. Additionally, FireAlpaca was used to create the images and gifs for the budget buddys.
 
 ## Challenges We Faced
 We faced several challenges throughout the project. One of our main challenges came from being overly ambitious. A good portion of our time was spent struggling to connect bank account to our website
@@ -23,12 +21,9 @@ HTML files for the website went missing as well. In terms of setting up the proj
 Pearl Hacks 2026 is the first hackathon experience for most of our group members, and it was the first time
 all of us had to create a coding project working as a group. We had a limited amount of time to learn 
 what we wanted to do and how to code it, and we were able to push through despite it all! We
-had so many creative ideas, and we were adventerous with every challenge and opportunity! A lot
+had so many creative ideas, and we were adventurous with every challenge and opportunity! A lot
 of us met for the first time at Pearl Hacks, and we worked collaboratively and supported each other through each obstacle.
 
 
 ## What We Learned
-The biggest lesson we learned was about working as a team. We all had different assets and skills, and it was
-amazing to see how we could work together to create a project we cared deeply for. Working with other people
-required us to check in on each other and communicate frequently, especially as we stayed overnight in different places.
-Finally, we learned about endurance and pushing through until the end!
+The biggest lesson we learned was about working as a team. We all had different assets and skills, and it was amazing to see how we could work together to create a project we cared deeply for. Working with other people required us to check in on each other and communicate frequently, especially as we stayed overnight in different places. Finally, we learned about endurance and pushing through until the end!
