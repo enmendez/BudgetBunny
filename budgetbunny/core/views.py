@@ -8,3 +8,6 @@ def show_index_page(request):
 
 def show_game_description(request):
     return render(request, "core/game-description.html")
+
+def choose_character(request):
+    return render(request, "core/choose-character.html")
