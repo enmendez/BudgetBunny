@@ -22,19 +22,6 @@ def choose_character(request):
     return render(request, "core/choose-character.html")
 
 # Still working on this
-# # Receive user input
-def card_input(request):
-    if request.method == "POST":
-        formset = CardInfo(request.POST)
-        if formset.is_valid():
-            for form in formset:
-                if form.cleaned_data:
-                    form.save() # save each card to Neon database
-            return render(request, "success.html")
-    else:
-        formset = CardInfo()
-    return render(request, "card_form.html", {"formset": formset})
-    return render(request, "core/choose-character.html")
 
 # Show main
 def show_main(request):
