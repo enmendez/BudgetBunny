@@ -29,3 +29,6 @@ def show_main(request):
 
 def show_cscreen(request):
     return render(request, "core/cscreen.html")
+
+def show_shop(request):
+    return render(request, "core/shop.html")
