@@ -28,3 +28,35 @@ class BudgetTracker:
             self.level += 1
             print(f"Level Up! You are now level {self.level}!")
             print(f"Next level target EXP: {self.target}")
+
+
+
+def main_menu():
+    game = BudgetTracker()
+    
+    while True:
+        print("\n====== Main Menu ======")
+        print("1. Add Money")
+        print("2. Show Status")
+        print("3. Exit")
+        choice = input("Enter your choice: ")
+
+        if choice == "1":
+            try:
+                amount = float(input("Enter amount to add: "))
+                game.add_money(amount)
+            except ValueError:
+                print("Please enter a valid number.")
+        elif choice == "2":
+            game.show_status()
+        elif choice == "3":
+            break
+        else:
+            print("Invalid choice.")
+        
+
+
+
+# Running the program
+if __name__ == "__main__":
+    main_menu()
