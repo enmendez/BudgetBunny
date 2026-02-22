@@ -1,20 +1,29 @@
 # BudgetBunny 🥕
 *Hopping towards a brighter future!*
 
-## Motivation
-Budgeting can be daunting. According to [Debt.org](https://www.debt.org/faqs/americans-in-debt/demographics/), 90% of Americans have some form of debt. Despite the impact income has on livelihood and mental well-being, many people struggle to manage their finances well. Therefore raising awareness about financial literacy and responsible financial decisions is imperative.
+## Inspiration
+Budgeting can be daunting. According to [Debt.org](https://www.debt.org/faqs/americans-in-debt/demographics/), 90% of Americans have some form of debt. Despite the impact income has on livelihood and mental well-being, many people struggle to manage their finances well. Therefore raising awareness about financial literacy and responsible financial decisions is an important issue for us to tackle.
 
 
-## Introducing BudgetBunny 
-We created BudgetBunny--an interactive, budget-tracking and saving app. Users are incentivied to save portions of their income as they gain experience points
+## What It Does
+We created BudgetBunny--an interactive, budget-tracking and saving app. Users are incentivized to save portions of their income as, in exchange, they gain experience points
 to level-up their cute bunny avatar. 
 
-## How We Build It
-- Backend: Django (add more here)
-- Frontend: HTML, CSS, Javascript
+## How We Built It
+For the btackend, we used Django and Python. We used Django to process user requests and interact with a Neon Tech database. Python was used to code the main menu option and receiving user input. HTML, CSS, and Javascript was used for the frontend. Additionally, FireAlpaca was used to create the images and gifs for the budget buddys.
 
-## What's Next?
-- Create accessories to add customizability for the characters
-- Add a variety of different budget bunnies
-- Implement other ways for users to gain exp
+## Challenges We Faced
+We faced several challenges throughout the project. One of our main challenges came from being overly ambitious. A good portion of our time was spent struggling to connect bank account to our website
+to collect user data in real time, which we ended up dropping. Additionally, we had a few issues with the webpages. When running the server, the HTML files would fail to load the CSS stylesheets. One of the
+HTML files for the website went missing as well. In terms of setting up the project, getting comfortable with Github and downloading the frameworks we needed on the terminal proved to be challenging as well.
 
+## Accomplishments We're Proud Of
+Pearl Hacks 2026 is the first hackathon experience for most of our group members, and it was the first time
+all of us had to create a coding project working as a group. We had a limited amount of time to learn 
+what we wanted to do and how to code it, and we were able to push through despite it all! We
+had so many creative ideas, and we were adventurous with every challenge and opportunity! A lot
+of us met for the first time at Pearl Hacks, and we worked collaboratively and supported each other through each obstacle.
+
+
+## What We Learned
+The biggest lesson we learned was about working as a team. We all had different assets and skills, and it was amazing to see how we could work together to create a project we cared deeply for. Working with other people required us to check in on each other and communicate frequently, especially as we stayed overnight in different places. Finally, we learned about endurance and pushing through until the end!
