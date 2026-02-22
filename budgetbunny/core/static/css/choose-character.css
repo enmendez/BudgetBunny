@@ -28,16 +28,19 @@ body{
 }
 
 .content{
-    align-items:center;
-    justify-content:space-around;
-    display:flex;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; 
     gap: 5px;
     padding: 1rem;
-    flex-direction:row;
+    cursor: pointer; 
+    position: relative; 
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
 .content img {
-    width: 100%;
+    width: auto;
     height: 300px;
     width: auto;
     gap: 1rem;
