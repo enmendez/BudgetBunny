@@ -36,7 +36,7 @@
 
 </head>
 
-<body class="d-flex h-100 text-center ">
+<body class="d-flex h-100 text-center text-bg-dark">
 
     <!-- SVG Icons -->
     <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
@@ -59,18 +59,23 @@
                 <h1>Choose your Budg<span style="color: black">EGG</span>ter</h1>
             </div>
 
-            <div class="content">
-                <div class="box">
-                    <img src="{% static 'img/rainbowegg.png' %}" alt="Rainbow egg">
+            <form method="POST" action="{% url 'choose_character' %}">
+                {% csrf_token %}
+
+                <div class="eggs">
+                    <button type="submit" name="egg" value="rainbowegg" class="egg-btn">
+                        <img src="{% static 'img/rainbowegg.png' %}" alt="Rainbow egg">
+                    </button>
+
+                    <button type="submit" name="egg" value="galaxyegg" class="egg-btn" style="width:50px; height: 50px;">
+                        <img src="{% static 'img/galaxyegg.png' %}" alt="galaxy egg">
+                    </button>
+
+                    <button type="submit" name="egg" value="regularegg" class="egg-btn" style="width:50px; height: 50px;">
+                        <img src="{% static 'img/pearlegg.png' %}" alt="Regular egg">
+                    </button>
                 </div>
-                <div class="box">
-                    <img src="{% static 'img/galaxyegg.png' %}" alt="galaxy egg">
-                </div>
-                <div class="box">
-                    <img src="{% static 'img/pearlegg.png' %}" alt="Regular egg">
-                </div>
-            </div>
-          
+            </form>
         </main>
 
         <footer class="mt-auto text-white-50">
@@ -89,3 +94,21 @@
 
 </body>
 </html>
+
+
+
+
+         <!-- {% csrf_token %}
+
+                <button type="submit" name="egg" value="rainbowegg" class="egg-btn">
+                    <img src="{% static 'img/rainbowegg.png' %}" alt="Rainbow egg">
+                </button>
+
+                <button type="submit" name="egg" value="galaxyegg" class="egg-btn">
+                    <img src="{% static 'img/galaxyegg.png' %}" alt="galaxy egg">
+                </button>
+
+                <button type="submit" name="egg" value="regularegg" class="egg-btn">
+                    <img src="{% static 'img/pearlegg.png' %}" alt="Regular egg">
+                </button>
+            </form>
