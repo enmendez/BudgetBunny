@@ -51,7 +51,7 @@
         <!-- CHAT INPUT -->
         <div class="chat-container">
             <textarea class="chat-textarea" id="chatInput" placeholder="Ask a budgeting question..."></textarea>
-            <img src="images/fairy.jpg" alt="fairy-bunny" id="fairy">
+            <img src="images/gemini_bunny.png" alt="fairy-bunny" id="fairy">
         </div>
 
     </div>
@@ -72,7 +72,7 @@ function addMessage(text, sender) {
     chatWindow.scrollTop = chatWindow.scrollHeight;
 }
 
-chatInput.addEventListener("keydown", async function(e) {
+chatInput.addEventListener("keydown", async function (e) {
     if (e.key === "Enter") {
         e.preventDefault();
 
@@ -82,20 +82,32 @@ chatInput.addEventListener("keydown", async function(e) {
         addMessage(question, "user");
         chatInput.value = "";
 
-        addMessage("Thinking...", "ai");
+        // Create placeholder bubble
+        const thinkingBubble = addMessage("Thinking...", "ai");
 
-        const res = await fetch("/ask", {
-            method: "POST",
-            headers: {"Content-Type": "application/json"},
-            body: JSON.stringify({ question })
-        });
+        // Fast request with timeout
+        const controller = new AbortController();
+        const timeout = setTimeout(() => controller.abort(), 5000); // 5 sec timeout
 
-        const data = await res.json();
+        try {
+            const res = await fetch("/ask", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ question }),
+                signal: controller.signal
+            });
 
-        const lastBubble = chatWindow.querySelector(".ai:last-child");
-        lastBubble.textContent = data.answer;
+            clearTimeout(timeout);
+
+            const data = await res.json();
+            thinkingBubble.textContent = data.answer;
+
+        } catch (err) {
+            thinkingBubble.textContent = "Sorry, I'm having trouble responding right now.";
+        }
     }
 });
+
 </script>
 
 </body>

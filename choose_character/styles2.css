@@ -148,12 +148,12 @@ html, body {
     box-shadow: 0 3px 6px rgba(0,0,0,0.1);
 }
 
-
 #fairy {
-    width: 4rem;
-    height: 4rem;
+    width: 10rem;
+    height: 10 rem;
     border-radius: 50%;
-    bottom: 0;
-    right: 5%;
+    position: absolute;
+    bottom: 10px;
+    left: 90%;
     object-fit: cover;
 }
