@@ -27,3 +27,6 @@ of us met for the first time at Pearl Hacks, and we worked collaboratively and s
 
 ## What We Learned
 The biggest lesson we learned was about working as a team. We all had different assets and skills, and it was amazing to see how we could work together to create a project we cared deeply for. Working with other people required us to check in on each other and communicate frequently, especially as we stayed overnight in different places. Finally, we learned about endurance and pushing through until the end!
+
+## How to run
+We built our project using Django with the intention of saving user financial data. With django downloaded on your computer, you can host the server and run it using the command 'python manage.py runserver'. Try the pearlegg!
