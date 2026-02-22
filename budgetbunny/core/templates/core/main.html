@@ -1,0 +1,59 @@
+{load static}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Layout</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'core/css/main.css' %}">
+</head>
+
+<body>
+<!-- Page Wrapper -->
+    <div class="page">
+
+        <!-- Top Layout -->
+        <div class="top-layout">
+
+            <!-- Left Column -->
+            <div class="left-column">
+                <div class="left-inner">
+                    <img src="{% static 'core/img/bunny-animation.gif' %}" class="character-gif">
+                    <div class="left-stats">
+                        <p>Level: 1</p>
+                        <p>XP: 0 / 100</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Center Column -->
+            <div class="center-column">
+                <div class="menu-box">
+                    <div class="menu-title">Main Menu</div>
+
+                    <div class="store-top-right">
+                        <div class="store-button">🛒</div>
+                        <div class="currency-display">🥕 123</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Bottom Chat Area -->
+        <div class="bottom-container">
+            <div class="chat-bubble">
+                Hello! I am your companion.
+            </div>
+
+            <div class="chat-icon">
+                <img src="{% static 'core/img/gemini_bunny.png' %}">
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
+</html>

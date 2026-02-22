@@ -11,3 +11,6 @@ def show_game_description(request):
 
 def choose_character(request):
     return render(request, "core/choose-character.html")
+
+def show_main(request):
+    return render(request, 'core/main.html')
